@@ -72,7 +72,8 @@ print("-----Ex 4-----")
 HT = 10
 
 while HT != 0:
-    HT = float(input("Entrer un prix hors taxes : "))
-    TTC = HT / 0.8
-    if(HT != 0):
-        print("Le prix TTC de " + str(HT) + "€ est " + str(TTC) + "€")
+    HT = float(input("Entrer un prix hors taxes (0 pour arrêter) : "))
+    TTC = HT * 1.2
+    if(HT == 0):
+        break
+    print(f"Le prix TTC de {HT:.2f}€ est {TTC:.2f}€")
