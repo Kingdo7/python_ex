@@ -57,3 +57,22 @@ while i <= 12:
     triple = triple *3
     print(triple)
     i += 1
+
+##############
+# Exercice 4 #
+##############
+
+"""
+Exercice
+
+En utilisant une boucle while, entrez un prix HT (entrez « 0 » pour terminer) et affichez sa valeur TTC.
+"""
+print("-----Ex 4-----")
+
+HT = 10
+
+while HT != 0:
+    HT = float(input("Entrer un prix hors taxes : "))
+    TTC = HT / 0.8
+    if(HT != 0):
+        print("Le prix TTC de " + str(HT) + "€ est " + str(TTC) + "€")
