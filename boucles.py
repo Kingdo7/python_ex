@@ -90,7 +90,7 @@ Calculez la somme d'une suite de nombres positifs ou nuls.
 Comptez combien il y avait de données et combien étaient supérieures à 100.
 Entrer un nombre inférieur ou égal à 0 indique la fin de la suite.
 """
-
+"""
 ex5 = int(input("Entrer un nombre : (0 ou moins pour arrêter) : "))
 ex5_somme = 0
 ex5_total = 0
@@ -109,4 +109,31 @@ while ex5 > 0:
     ex5 = int(input("Entrer un nombre : (0 ou moins pour arrêter) : "))
 
 print(f"Il y a {ex5_total} nombre(s) au total, dont {plus100} sont supérieur a 100, le total est égal a {ex5_somme}")
+"""
 
+##############
+# Exercice 6 #
+##############
+print("-----Ex 6-----")
+
+"""
+Exercice
+
+Une légende de l'Inde ancienne raconte que le jeu d'échecs a été inventé par un vieux sage, que son roi voulut remercier en lui affirmant 
+qu'il lui accorderait n'importe quel cadeau en récompense. 
+Le vieux sage demanda qu'on lui fournisse simplement un peu de riz pour ses vieux jours et plus précisément un nombre de 
+grains de riz suffisant pour que l'on puisse en déposer 1 seul sur la première case du jeu qu'il venait d'inventer, deux sur la suivante, 
+quatre sur la troisième et ainsi de suite jusqu'à la 64e case. Écrivez un programme Python qui affiche le nombre de grains à déposer sur 
+chacune des 64 cases du jeu. Calculez ce nombre de deux manières :
+
+le nombre exact de grains (nombre entier)
+
+le nombre de grains en notation scientifique (nombre réel)
+"""
+riz = 1
+nb_case = 64
+
+for i in range(1, nb_case + 1):
+    if i != 1:
+        riz *= 2
+    print(f"Sur la case {i} il y a {riz:,} grain de riz")
