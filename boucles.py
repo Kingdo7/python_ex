@@ -68,7 +68,7 @@ Exercice
 En utilisant une boucle while, entrez un prix HT (entrez « 0 » pour terminer) et affichez sa valeur TTC.
 """
 print("-----Ex 4-----")
-
+"""
 HT = 10
 
 while HT != 0:
@@ -77,3 +77,36 @@ while HT != 0:
     if(HT == 0):
         break
     print(f"Le prix TTC de {HT:.2f}€ est {TTC:.2f}€")
+"""
+##############
+# Exercice 5 #
+##############
+print("-----Ex 5-----")
+
+"""
+Exercice
+
+Calculez la somme d'une suite de nombres positifs ou nuls. 
+Comptez combien il y avait de données et combien étaient supérieures à 100.
+Entrer un nombre inférieur ou égal à 0 indique la fin de la suite.
+"""
+
+ex5 = int(input("Entrer un nombre : (0 ou moins pour arrêter) : "))
+ex5_somme = 0
+ex5_total = 0
+plus100 = 0
+
+
+while ex5 > 0:
+    if ex5 <= 0:
+        break
+
+    if ex5 > 100:
+        plus100 += 1
+    
+    ex5_somme += ex5
+    ex5_total += 1
+    ex5 = int(input("Entrer un nombre : (0 ou moins pour arrêter) : "))
+
+print(f"Il y a {ex5_total} nombre(s) au total, dont {plus100} sont supérieur a 100, le total est égal a {ex5_somme}")
+
